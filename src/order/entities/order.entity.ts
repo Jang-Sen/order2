@@ -1,5 +1,17 @@
 import { Base } from '../../common/entities/base.entity';
-import { Entity } from 'typeorm';
+import { Column, Entity } from 'typeorm';
 
 @Entity()
-export class Order extends Base {}
+export class Order extends Base {
+  @Column()
+  public productId: string;
+
+  @Column()
+  public customerId: string;
+
+  @Column()
+  public quantity: number;
+
+  @Column()
+  public totalPrice: number;
+}
