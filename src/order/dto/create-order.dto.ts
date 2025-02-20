@@ -4,6 +4,9 @@ import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateOrderDto {
   @IsString()
+  id: string;
+
+  @IsString()
   @IsNotEmpty()
   @ApiProperty({ example: '', description: '제품 UUID' })
   productId: string;
